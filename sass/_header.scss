@@ -8,7 +8,7 @@
     font-style: italic;
     font-weight: 700;
     color: #fff;
-    text-shadow: 0px 2px 20px $color-primary-blue-shady;
+    @include create-text-shadow($color-primary-blue-shady);
   }
 
   &__btn {
@@ -23,6 +23,7 @@
     padding: 1.5rem 0;
     width: 100%;
     z-index: 10;
+    background-color: rgba($color-primary-black, 0.5);
   }
 
   &__list {

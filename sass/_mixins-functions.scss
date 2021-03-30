@@ -1,3 +1,7 @@
+@mixin create-text-shadow($color) {
+  text-shadow: 0px 2px 20px $color;
+}
+
 @mixin sphere-behavior($top_value, $left_value, $duration, $color) {
   top: $top_value;
   left: $left_value;
