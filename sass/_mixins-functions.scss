@@ -1,0 +1,7 @@
+@mixin sphere-behavior($top_value, $left_value, $duration, $color) {
+  top: $top_value;
+  left: $left_value;
+  animation: sphere $duration linear infinite;
+  border: 2px solid $color;
+  box-shadow: -5px -3px 20px rgba($color, 0.5);
+}

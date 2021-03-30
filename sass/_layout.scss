@@ -1,0 +1,14 @@
+body {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(100vh, min-content));
+}
+
+.header {
+  grid-row: 1 / 2;
+}
+
+.main-content {
+  grid-row: 2 / -1;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(100vh, min-content));
+}

@@ -1,0 +1,20 @@
+// ========================================== Variables ==============================================
+$color-primary-blue: hsl(160, 100%, 50%);
+$color-primary-blue-shady: hsl(167, 100%, 50%);
+
+$color-primary-black: hsl(0, 0%, 13%);
+
+$color-yellow-shiny: hsl(59, 100%, 51%);
+$color-violet-shiny: #f705ff;
+$color-primary-opposite: hsl(12, 100%, 50%);
+//=========================================== General styles =========================================
+html {
+  font-size: 62.5%; //10px
+}
+
+body {
+  background-color: $color-primary-black;
+  min-height: 100vh;
+  // font-family: 'Roboto', sans-serif;
+  font-family: 'Play', sans-serif;
+}

@@ -1,0 +1,137 @@
+// ==================================== General header styles ==============================
+.header {
+  position: relative;
+  font-family: 'Play', sans-serif;
+
+  &__description {
+    font-size: 3rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0px 2px 20px $color-primary-blue-shady;
+  }
+
+  &__btn {
+    font-size: 2.5rem;
+  }
+
+  //=========================================== Navigation ==========================================
+  &__navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1.5rem 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  &__item {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &__link:visited,
+  &__link:link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: all 0.3s;
+    opacity: 0.6;
+  }
+
+  &__link:before {
+    content: '{';
+    position: absolute;
+    top: 0;
+    left: -1.5rem;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  &__link:after {
+    content: '}';
+    position: absolute;
+    top: 0;
+    right: -1.5rem;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+}
+
+// ========================================= heading content styles =================================
+.heading-container {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-row-gap: 6rem;
+  justify-items: center;
+}
+
+// ========================================= Spheres styles =================================
+.spheres-container {
+  height: 100%;
+  position: relative;
+  z-index: -10;
+}
+
+.sphere {
+  position: absolute;
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+
+  &:nth-child(1) {
+    @include sphere-behavior(12%, 42%, 3s, $color-primary-blue-shady);
+  }
+
+  &:nth-child(5) {
+    @include sphere-behavior(67%, 10%, 5s, $color-primary-blue-shady);
+  }
+
+  &:nth-child(10) {
+    @include sphere-behavior(20%, 80%, 4s, $color-violet-shiny);
+  }
+
+  &:nth-child(2) {
+    @include sphere-behavior(90%, 50%, 4s, $color-violet-shiny);
+  }
+
+  &:nth-child(3) {
+    @include sphere-behavior(17%, 6%, 5s, $color-yellow-shiny);
+  }
+
+  &:nth-child(4) {
+    @include sphere-behavior(20%, 60%, 4s, $color-yellow-shiny);
+  }
+
+  &:nth-child(6) {
+    @include sphere-behavior(80%, 70%, 3s, $color-primary-opposite);
+  }
+
+  &:nth-child(8) {
+    @include sphere-behavior(32%, 25%, 5s, $color-primary-opposite);
+  }
+
+  &:nth-child(7) {
+    @include sphere-behavior(60%, 80%, 3s, $color-primary-blue);
+  }
+
+  &:nth-child(9) {
+    @include sphere-behavior(90%, 25%, 7s, $color-primary-blue);
+  }
+}

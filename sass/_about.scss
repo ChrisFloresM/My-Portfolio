@@ -1,0 +1,31 @@
+.about {
+  display: grid;
+  grid-template-columns: [about-start] 70% [about-mid] 30% [about-end];
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 5rem;
+
+  &__info {
+    background-image: linear-gradient(rgba($color-primary-blue, 0.8), rgba($color-primary-blue, 0.5)),
+      url('../assets/img/bg-about-md.jpg');
+    background-size: cover;
+    background-position: center;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 4.5rem;
+  }
+
+  &__text {
+    color: #000;
+    font-size: 2rem;
+    padding: 3rem;
+    line-height: 2;
+    text-align: center;
+    text-shadow: 10px 10px 50px hsl(0, 0%, 100%);
+  }
+}

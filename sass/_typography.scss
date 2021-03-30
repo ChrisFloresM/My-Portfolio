@@ -1,0 +1,43 @@
+//================================ Headings =======================================================
+.main-heading {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  margin: 0;
+}
+
+.heading-2 {
+  font-size: 4rem;
+  color: $color-primary-opposite;
+  text-transform: uppercase;
+  text-shadow: 0px 2px 20px hsl(0, 0%, 100%);
+}
+
+// ============================== Glitched text =====================================================
+.glitch {
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  animation: glitch 500ms infinite;
+}
+
+.glitch-span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  &:first-child {
+    animation: glitch 650ms infinite;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-0.05em, -0.025em);
+  }
+
+  &:last-child {
+    animation: glitch 375ms infinite;
+    z-index: 1;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+    transform: translate(0.05em, 0.025em);
+  }
+}

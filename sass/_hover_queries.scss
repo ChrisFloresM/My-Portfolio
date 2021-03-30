@@ -1,0 +1,22 @@
+@media (hover: hover) {
+  //====================================== Button ======================================
+  .button:hover {
+    background-color: rgba($color-yellow-shiny, 0.9);
+    color: $color-primary-black;
+    transform: translateY(-1rem);
+    box-shadow: -5px 3px 50px rgba($color-yellow-shiny, 0.5);
+  }
+
+  //========================================== Nav elements =================================
+
+  .header__link:hover {
+    color: $color-yellow-shiny;
+    text-shadow: 0px 2px 20px $color-primary-blue-shady;
+    transform: translateY(-2rem);
+
+    &:before,
+    &:after {
+      opacity: 1;
+    }
+  }
+}
