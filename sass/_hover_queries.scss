@@ -19,4 +19,29 @@
       opacity: 1;
     }
   }
+
+  //
+  .projects {
+    &__project-box:hover {
+      box-shadow: 1px 1px 20px $color-primary-blue-shady;
+      animation: border-color 5s infinite alternate;
+
+      & > * {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    &__project:hover {
+      background: transparent;
+    }
+
+    &__repo-icon:hover {
+      color: $color-yellow-shiny;
+    }
+  }
+
+  .contact__link:hover {
+    color: $color-primary-opposite;
+  }
 }

@@ -1,0 +1,28 @@
+.contact {
+  display: grid;
+  grid-template-rows: 6rem repeat(2, min-content) 6rem;
+  background-color: $color-primary-blue;
+  grid-gap: 5rem;
+
+  &__heading {
+    grid-row: 2 / 3;
+    color: $color-primary-black;
+    justify-self: center;
+  }
+
+  &__icon-box {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-row-gap: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  &__link {
+    display: inline-block;
+    transform: scale(5);
+    color: $color-primary-black;
+  }
+}

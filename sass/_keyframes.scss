@@ -63,3 +63,27 @@
     opacity: 0;
   }
 }
+
+//=============================================== Border color ======================================
+
+@keyframes border-color {
+  0% {
+    box-shadow: 1px 1px 20px $color-primary-blue-shady;
+  }
+
+  25% {
+    box-shadow: 1px 1px 20px $color-primary-blue;
+  }
+
+  50% {
+    box-shadow: 1px 1px 20px $color-yellow-shiny;
+  }
+
+  75% {
+    box-shadow: 1px 1px 20px $color-violet-shiny;
+  }
+
+  100% {
+    box-shadow: 1px 1px 20px $color-primary-opposite;
+  }
+}

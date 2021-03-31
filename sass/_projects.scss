@@ -1,0 +1,109 @@
+.projects {
+  display: grid;
+  grid-template-rows: 3rem min-content min-content 3rem;
+  grid-template-columns: 6rem 1fr 6rem;
+  grid-gap: 3rem;
+  align-content: center;
+
+  &__heading {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    color: $color-violet-shiny;
+    justify-self: center;
+  }
+
+  &__container {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-template-rows: repeat(auto-fit, 35rem);
+    grid-gap: 6rem;
+  }
+
+  &__project-box {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border: 2px solid $color-primary-blue-shady;
+    border-radius: 15px;
+    overflow: hidden;
+
+    &--1 {
+      background-image: url('/assets/img/sitio-1.PNG');
+    }
+
+    &--2 {
+      background-image: url('/assets/img/sitio-2.PNG');
+    }
+
+    &--3 {
+      background-image: url('/assets/img/sitio-6.PNG');
+    }
+
+    &--4 {
+      background-image: url('/assets/img/sitio-4.PNG');
+    }
+
+    &--5 {
+      background-image: url('/assets/img/sitio-3.PNG');
+    }
+
+    &--6 {
+      background-image: url('/assets/img/sitio-5.PNG');
+    }
+
+    & > * {
+      opacity: 0;
+      transform: scale(1.3);
+      transition: all 0.5s;
+    }
+  }
+
+  &__project:link,
+  &__project:visited {
+    display: grid;
+    grid-template-rows: 50% repeat(2, 1fr);
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    height: 35rem;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s;
+  }
+
+  &__name {
+    grid-row: 2 / 3;
+    background-color: rgba($color-primary-black, 0.8);
+    text-align: center;
+    align-self: center;
+    text-transform: uppercase;
+  }
+
+  &__icon-box {
+    grid-row: 3 / 4;
+    display: flex;
+    justify-content: center;
+    background-color: rgba($color-primary-black, 0.8);
+  }
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  &__repo-link:visited,
+  &__repo-link:link {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: $color-primary-opposite;
+    z-index: 10;
+  }
+
+  &__repo-icon {
+    transform: scale(3);
+  }
+}
